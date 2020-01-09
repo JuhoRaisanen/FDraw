@@ -1,0 +1,120 @@
+
+	FunctionDrawer 1.0
+	Juho Raisanen
+	22.04.2019
+
+
+	How to use FunctionDrawer?
+	1. Introduction
+	2. Function properties
+	3. Setting menu
+
+
+
+	1. Introduction
+
+	FunctionDrawer is a software that can be used to draw mathematical images.
+	In the background of the image exists a xy-plane, and every pixel value of the image is calculated
+	from x and y values corresponding that pixel.
+	You can create interesting images with changing colouring settings and calculation function.
+	Images can be saved for later edition, and creating .png files is also possible.
+	Have a great time with drawing functions!
+
+
+
+	2. Function properties
+
+	You can change the calculation function from 'Function' -pane.
+	Function calculates pixel values from xy -coordinates of the pixels.
+	Be careful with your typing, because software does not accept erroneous functions.
+	
+	Available operators: +, -, *, /
+	
+	Available Basic Functions:
+	sin(a)		= sin of radian angle a
+	cos(a)		= cos of radian angle a
+	tan(a)		= tan of radian angle a
+	(x)e(a)		= x to the power of a
+	log(a)		= natural logarithm of a
+	
+	Variable syntax:
+	x, y		= acceptable variables	
+	10x		= 10*x
+	1.5y		= 1.5*y
+	-5x 		= -5*x
+	x2		= x*x
+	4y5		= 4*(y^5)
+	
+	Example Functions:
+	y
+	x+y
+	12x2 + sin(y)
+	cos(x2 + y2)
+	(5x*y4)/(xe(y))
+	log(sin(2x) + cos(-y))*10
+	
+	
+	
+	3. Setting menu
+	
+	From settings you can change color setups and the size of the xy-plane.
+	Settings in detail:
+	
+	Show coordinates:	Shows x,y coordinates and function value of mouse position in upper right corner. 
+						
+	Set hue:		Sets hue of drawing color. Value must be in range (0, 1). For example, 0.0 = red, 0.15 = yellow, 0.3 = green, 0.6 = blue
+						
+	Set saturation:		Sets saturation of drawing color. Value must be in range (0, 1). For example, 1.0 = Full color, 0.0 = Full grey.
+						
+	Set brightness:		Sets brightness of drawing color. Value must be in range (0, 1). For example, 1 = Full brightness, 0 = Full black
+							
+	Set drawing mode:	Defines how pixel hue, saturation and brightness are changed by function values.
+	
+	Drawing modes:
+
+	1: Only brightness changes
+	2: Only saturation changes
+	3: Only hue changes
+	4: Brightness and saturation changes
+	5: Brightness and hue changes
+	6: Hue and saturation changes
+	7: Hue, saturation and brightness changes
+						
+	Set minimum		Function values are scaled to range (0, 1) for drawing purposes.
+	drawing limit:		Values below minimum drawing limit are scaled to 0.	
+
+	Set maximum		Function values are scaled to range (0, 1) for drawing purposes.
+	drawing limit:		Values over maximum drawing limit are scaled to 1.	
+
+	Set minimum x:		Sets the x-coordinate value in the left edge of the image.
+	
+	Set maximum x:		Sets the x-coordinate value in the right edge of the image.
+	
+	Set minimum y:		Sets the y-coordinate value in the top edge of the image.
+	
+	Set maximum y:		Sets the y-coordinate value in the bottom edge of the image.
+	
+	
+	
+						
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
