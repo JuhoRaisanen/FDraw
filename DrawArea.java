@@ -9,7 +9,7 @@ and pixels are coloured according to those values.
 Calculation is executed recursively in method "laskeOsaArvo()".
 
 */
-
+package utils;
 
 import java.awt.Graphics;
 import java.awt.Color;
@@ -24,8 +24,8 @@ public class DrawArea extends JPanel {
 	private int pixelkoko = 1;
 	private int leveys = 1250;
 	private int korkeus = 750;
-	private int rangeMin = -10;
-	private int rangeMax = 10;
+	private double rangeMin = -10;
+	private double rangeMax = 10;
 	private float hue = 0.0f, sat = 0.75f, bright = 1.0f;
 	private int drawMode = 1;
 	
@@ -65,10 +65,10 @@ public class DrawArea extends JPanel {
 		return tekstit;
 	}
 	
-	public int getRangeMin() {
+	public double getRangeMin() {
 		return rangeMin;
 	}
-	public int getRangeMax() {
+	public double getRangeMax() {
 		return rangeMax;
 	}
 	public float getHue() {
@@ -99,10 +99,10 @@ public class DrawArea extends JPanel {
 		return img;
 	}
 	
-	public void setRangeMin(int rangeMin) {
+	public void setRangeMin(double rangeMin) {
 		this.rangeMin = rangeMin;
 	}
-	public void setRangeMax(int rangeMax) {
+	public void setRangeMax(double rangeMax) {
 		this.rangeMax = rangeMax;
 	}
 	public void setHue(float hue) {
@@ -479,6 +479,20 @@ public class DrawArea extends JPanel {
 						}
 					}
 				}
+				//c = abs
+			} else if (c == 65 || c == 97) {	
+			
+				if(i < max-2) {
+					
+					if(kirjaimet[i+1] == 66 || kirjaimet[i+1] == 98) {
+						if(kirjaimet[i+2] == 83 || kirjaimet[i+2] == 115) {
+							
+							funktionOsat[funktionPituus] = 17;
+							funktionPituus++;
+							i += 2;
+						}
+					}
+				}
 				
 				//c == (
 			} else if (c == 40) {
@@ -628,6 +642,7 @@ public class DrawArea extends JPanel {
 				}
 				break;
 				
+				// vakio
 				case 7:
 				tulos = kertoimet[kerroin];
 				kerroin++;
@@ -670,6 +685,12 @@ public class DrawArea extends JPanel {
 				case 16:
 				sulku = annaSulkujenLoppu(i+1);
 				tulos = Math.log(laskeOsaArvo(x, y, i+2, sulku));
+				i = sulku;
+				break;
+
+				case 17:
+				sulku = annaSulkujenLoppu(i+1);
+				tulos = Math.abs(laskeOsaArvo(x, y, i+2, sulku));
 				i = sulku;
 				break;
 			}

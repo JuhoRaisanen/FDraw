@@ -5,7 +5,7 @@ It also creates:
 - TiedostonLukija object that handles saving and loading
 
 */
-
+package utils;
 
 import javax.swing.*;
 import javax.swing.event.*;
@@ -178,8 +178,8 @@ public class Ikkuna extends JFrame implements MouseMotionListener {
 					float sat = Float.parseFloat(input[1].getText());
 					float bright = Float.parseFloat(input[2].getText());
 					int drawMode = Integer.parseInt(input[3].getText());
-					int rangeMin = Integer.parseInt(input[4].getText());
-					int rangeMax = Integer.parseInt(input[5].getText());
+					double rangeMin = Double.parseDouble(input[4].getText());
+					double rangeMax = Double.parseDouble(input[5].getText());
 					double minX = Double.parseDouble(input[6].getText());
 					double maxX = Double.parseDouble(input[7].getText());
 					double minY = Double.parseDouble(input[8].getText());
@@ -218,8 +218,8 @@ public class Ikkuna extends JFrame implements MouseMotionListener {
 				arvot[1] = Float.toString(kuva.getSat());
 				arvot[2] = Float.toString(kuva.getBright());
 				arvot[3] = Integer.toString(kuva.getDrawMode());
-				arvot[4] = Integer.toString(kuva.getRangeMin());
-				arvot[5] = Integer.toString(kuva.getRangeMax());
+				arvot[4] = Double.toString(kuva.getRangeMin());
+				arvot[5] = Double.toString(kuva.getRangeMax());
 				arvot[6] = Double.toString(kuva.getMinX());
 				arvot[7] = Double.toString(kuva.getMaxX());
 				arvot[8] = Double.toString(kuva.getMinY());
@@ -258,8 +258,8 @@ public class Ikkuna extends JFrame implements MouseMotionListener {
 						float sat = Float.parseFloat(arvot[1]);
 						float bright = Float.parseFloat(arvot[2]);
 						int drawMode = Integer.parseInt(arvot[3]);
-						int rangeMin = Integer.parseInt(arvot[4]);
-						int rangeMax = Integer.parseInt(arvot[5]);
+						double rangeMin = Double.parseDouble(arvot[4]);
+						double rangeMax = Double.parseDouble(arvot[5]);
 						double minX = Double.parseDouble(arvot[6]);
 						double maxX = Double.parseDouble(arvot[7]);
 						double minY = Double.parseDouble(arvot[8]);
@@ -558,8 +558,8 @@ public class Ikkuna extends JFrame implements MouseMotionListener {
 			arvot[1] = Float.toString(kuva.getSat());
 			arvot[2] = Float.toString(kuva.getBright());
 			arvot[3] = Integer.toString(kuva.getDrawMode());
-			arvot[4] = Integer.toString(kuva.getRangeMin());
-			arvot[5] = Integer.toString(kuva.getRangeMax());
+			arvot[4] = Double.toString(kuva.getRangeMin());
+			arvot[5] = Double.toString(kuva.getRangeMax());
 			arvot[6] = Double.toString(kuva.getMinX());
 			arvot[7] = Double.toString(kuva.getMaxX());
 			arvot[8] = Double.toString(kuva.getMinY());

@@ -36,6 +36,7 @@
 	tan(a)		= tan of radian angle a
 	(x)e(a)		= x to the power of a
 	log(a)		= natural logarithm of a
+	abs(a)		= absolute value of a
 	
 	Variable syntax:
 	x, y		= acceptable variables	

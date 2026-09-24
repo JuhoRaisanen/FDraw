@@ -3,6 +3,7 @@
 Resolution window, which opens the main program
 */
 
+package utils;
 
 import javax.swing.*;
 import java.awt.*;
